@@ -22,7 +22,7 @@ const shirtSchema = new Schema({
         allowNull: false
     },
 
-    like: {
+    likes: {
         type: Number,
         required: true,
         allowNull: false
