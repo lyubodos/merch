@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 require("dotenv/config");
 
+const shirtsRouter = require("./routes/shirtsRouter");
+
 const app = express();
 
 app.use(express.json());
@@ -23,10 +25,7 @@ connection.once("open", () => {
 
 
 
-app.use((req, res, next) => {
-    res.write("Hello There!!!");
-    res.end();
-});
+app.use('/tshirts', shirtsRouter);
 
 
 
