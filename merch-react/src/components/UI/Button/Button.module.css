@@ -1,4 +1,4 @@
-.button{
+.button {
   font: inherit;
   border: 1px solid green;
   background: chartreuse;
@@ -9,16 +9,13 @@
   border-radius: 30px;
 }
 
-.button:active{
-    background:rgb(100, 216, 100);
-};
+.button:hover {
+  background: rgb(86, 226, 86);
+}
 
-
-.button:hover{
-    background:rgb(86, 226, 86)
-};
-
-
+.button:active {
+  background: rgb(100, 216, 100);
+}
 
 button:disabled,
 button:focus:disabled,

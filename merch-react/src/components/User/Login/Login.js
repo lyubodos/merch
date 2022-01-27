@@ -7,22 +7,42 @@ import classes from "./Login.module.css";
 export default function Login(props) {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPass, setEnteredPass] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(true);
+  const [passwordIsValid, setPasswordIsValid] = useState(true);
+  const [formIsValid, setFormIsValid] = useState(true);
 
+  const emailChangeHandler = (e) => {
+    const currEmail = e.target.value;
 
-  const emailChangeHandler = () => {};
+    setEnteredEmail(currEmail);
 
-  const validateEmailHandler = () => {};
+    validateEmailHandler(currEmail);
+  };
 
+  const validateEmailHandler = (email) => {
+    setEmailIsValid(email.includes("@"));
+  };
 
-  const passChangeHanlder = () => {};
+  const passChangeHanlder = (e) => {
+    const currPass = e.target.value;
 
-  const validatePassword = () => {};
+    setEnteredPass(currPass);
 
+    validatePassword(currPass);
+  };
+
+  const validatePassword = (pass) => {
+    setPasswordIsValid(pass.trim().length > 6);
+  };
 
   return (
     <Card className={classes.login}>
       <form>
-        <div className={classes.control}>
+        <div
+          className={`${classes.control} ${
+            emailIsValid ? "" : classes.invalid
+          }`}
+        >
           <label htmlFor="email">E-mail</label>
           <input
             type="email"
@@ -32,18 +52,22 @@ export default function Login(props) {
             onBlur={validateEmailHandler}
           />
         </div>
-        <div className={classes.control}>
-            <label htmlFor="password">Password</label>
-            <input
+        <div
+          className={`${classes.control} ${
+            passwordIsValid ? "" : classes.invalid
+          }`}
+        >
+          <label htmlFor="password">Password</label>
+          <input
             type="password"
             id="password"
             value={enteredPass}
             onChange={passChangeHanlder}
             onBlur={validatePassword}
-            />
+          />
         </div>
         <div>
-            <Button>Login</Button>
+          <Button>Login</Button>
         </div>
       </form>
     </Card>
