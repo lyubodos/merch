@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from "./Header.module.css";
 import frog_logo from '../../../assets/frog_logo.png';
@@ -12,9 +13,10 @@ export default function Header() {
         </div>
         <nav className={classes.nav}>
           <ul>
-            <li><a href=''>Home</a></li>
-            <li><a href=''>Merch</a></li>
-            <li><a href=''>Login</a></li>
+            
+            <li><Link className="nav_link" to='/'>Home</Link></li>
+            <li><Link className="nav_link" to='/merch'>Merch</Link></li>
+            <li><Link className="nav_link" to='/login'>Login</Link></li>
           </ul>
         </nav>
       </header>
