@@ -13,7 +13,6 @@ export default function Header() {
         </div>
         <nav className={classes.nav}>
           <ul>
-            
             <li><Link className="nav_link" to='/'>Home</Link></li>
             <li><Link className="nav_link" to='/merch'>Merch</Link></li>
             <li><Link className="nav_link" to='/login'>Login</Link></li>
