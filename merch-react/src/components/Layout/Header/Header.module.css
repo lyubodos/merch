@@ -1,0 +1,54 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    padding: 0 2.5rem;
+}
+
+.header_panel{ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_heading {
+    font-family: Mochiy Pop P One;
+    margin: 14px;
+    
+}
+
+.nav > ul{
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    margin:auto 18px;
+    list-style: none;
+}
+
+li a {
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: chartreuse;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+li a:active{
+    background-color: lightgreen;
+    color: white;
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+}
