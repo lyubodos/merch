@@ -29,8 +29,8 @@ function App() {
   }
 
   function logoutHandler() {
-    setIsLoggedIn(false);
     localStorage.setItem('isLoggedIn', 0);
+    setIsLoggedIn(false);
   }
 
   return (
